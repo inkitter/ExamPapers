@@ -100,8 +100,6 @@ namespace ExamPapers
             {
                 if (column.Visible)
                 {
-                    // You could potentially name the column based on the DGV column name (beware of dupes)
-                    // or assign a type based on the data type of the data bound to this DGV column.
                     dt.Columns.Add();
                 }
             }
@@ -115,7 +113,6 @@ namespace ExamPapers
                 }
                 dt.Rows.Add(cellValues);
             }
-
             return dt;
         }
 

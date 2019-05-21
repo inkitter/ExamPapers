@@ -13,8 +13,9 @@ namespace ExamPapers
 {
     public class Tools
     {
-        public static DataTable ReadCSV(string filePath)
+        public static DataTable ReadCSV(string filePath,char split=',')
         {
+            //读取CSV转化为DataTable
             var dt = new DataTable();
             foreach (var headerLine in File.ReadLines(filePath).Take(1))
             {
@@ -25,13 +26,14 @@ namespace ExamPapers
             }
             foreach (var line in File.ReadLines(filePath).Skip(1))
             {
-                dt.Rows.Add(line.Split(','));
+                dt.Rows.Add(line.Split(split));
             }
             return dt;
         }
 
         public static Dictionary<string, SingleQuest> InitdictData(DataTable dtData)
         {
+            //按照ID、题目类建立词典，总数据库
             Dictionary<string, SingleQuest> dictData = new Dictionary<string, SingleQuest>();
             foreach (DataRow dr in dtData.Rows)
             {
@@ -44,10 +46,10 @@ namespace ExamPapers
             return dictData;
         }
     }
-    
+
     public class SingleQuest
+    //单个题目的类
     {
-        
         public SingleQuest(DataRow dr)
         {
             ID = dr["ID"].ToString();
@@ -98,10 +100,24 @@ namespace ExamPapers
                 set.SetType(r["题型"].ToString());
                 set.SetCount(r["数量"].ToString());
                 set.SetScore(r["分值"].ToString());
-                dictsetting.Add(r["题型"].ToString(), set);
             }
         }
-        public Dictionary<string, Settings> dictsetting;
-        public Dictionary<int, SingleQuest> dictquests;
+        public Dictionary<string, Settings> dictSetting;
+        public Dictionary<string, SingleQuest> dictAllQuests;
+        public DataTable ShowAllQuest()
+        {
+            DataTable AllData = new DataTable();
+            foreach(SingleQuest sq in dictAllQuests.Values)
+            {
+
+            }
+            return AllData;
+        }
+        public List<string> GetQuestTypesList()
+        {
+            List<string> lst = new List<string>();
+
+            return lst;
+        }
     }
 }
