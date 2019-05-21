@@ -1,0 +1,10 @@
+E:\Git\ExamPapers\ExamPapers\bin\Debug\ExamPapers.exe.config
+E:\Git\ExamPapers\ExamPapers\bin\Debug\ExamPapers.exe
+E:\Git\ExamPapers\ExamPapers\bin\Debug\ExamPapers.pdb
+E:\Git\ExamPapers\ExamPapers\obj\Debug\ExamPapers.csprojAssemblyReference.cache
+E:\Git\ExamPapers\ExamPapers\obj\Debug\ExamPapers.frmMain.resources
+E:\Git\ExamPapers\ExamPapers\obj\Debug\ExamPapers.Properties.Resources.resources
+E:\Git\ExamPapers\ExamPapers\obj\Debug\ExamPapers.csproj.GenerateResource.cache
+E:\Git\ExamPapers\ExamPapers\obj\Debug\ExamPapers.csproj.CoreCompileInputs.cache
+E:\Git\ExamPapers\ExamPapers\obj\Debug\ExamPapers.exe
+E:\Git\ExamPapers\ExamPapers\obj\Debug\ExamPapers.pdb
